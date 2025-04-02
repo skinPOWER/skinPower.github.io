@@ -1,0 +1,41 @@
+/* Layout for the team members */
+.team-member {
+    display: flex;
+    justify-content: space-between;
+    margin: 40px 0;
+    align-items: center;
+}
+
+.team-member .text {
+    width: 45%;
+}
+
+.team-member .image {
+    width: 45%;
+    text-align: center;
+}
+
+.team-member img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* For alternating layout (Image on the right, Text on the left) */
+.alternate-layout {
+    flex-direction: row; /* Default: Image on the right, Text on the left */
+}
+
+.alternate-layout.reverse {
+    flex-direction: row-reverse; /* Reverse: Text on the right, Image on the left */
+}
+
+h3 {
+    font-family: 'Gloock', serif;
+    color: #c49278;
+}
+
+p {
+    font-family: 'Georgia', serif;
+    color: #333;
+}
