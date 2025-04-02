@@ -1,24 +1,21 @@
-/* Global Styles */
+/* General Body Styles */
 body {
     font-family: 'Georgia', serif;
-    background-color: #fefaf1;
+    background-color: #fefaf1; /* Background color */
     color: #333;
     margin: 0;
     padding: 0;
 }
 
-h1, h2, h3, h4, h5 {
-    font-family: 'Gloock', serif;
-    color: #c49278;
-}
-
 header {
-    background-color: #feed9b;
-    padding: 20px;
+    background-color: #feed9b; /* Secondary color */
+    padding: 20px 0;
     text-align: center;
 }
 
-header .logo h1 {
+header h1 {
+    font-family: 'Gloock', serif;
+    color: #c49278; /* Logo color */
     margin: 0;
 }
 
@@ -34,91 +31,101 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: #333;
+    color: #c49278; /* Accent color */
     font-weight: bold;
 }
 
+/* Main Content */
 main {
     padding: 20px;
-}
-
-.hero {
-    background-color: #c49278;
-    color: #fff;
-    padding: 40px;
     text-align: center;
 }
 
-.projects {
-    margin-top: 40px;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-    padding: 0 20px;
+.team {
+    margin-top: 20px;
 }
 
-.project-box {
-    background-color: #feed9b;
+h2 {
+    font-family: 'Gloock', serif;
+    color: #c49278; /* Accent color */
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+
+.team-member {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 0;
     padding: 20px;
-    text-align: center;
+    background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
 }
 
-.project-box img {
+.team-member .text {
+    flex: 1;
+    padding: 20px;
+    text-align: left;
+}
+
+.team-member h3 {
+    font-family: 'Gloock', serif;
+    color: #c49278; /* Accent color */
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.team-member p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.team-member .image {
+    flex: 1;
+    max-width: 300px;
+    margin: 20px;
+}
+
+.team-member img {
     width: 100%;
     height: auto;
-    border-radius: 8px;
+    border-radius: 10px;
+    object-fit: cover; /* Ensures the images don't stretch */
 }
 
-.project-box:hover {
-    transform: translateY(-5px);
-}
-
-.project-box h4 {
-    margin-top: 10px;
-    color: #c49278;
-}
-
-.project-box h5 {
-    margin-top: 5px;
-    font-size: 1rem;
-    color: #a8795e;
-}
-
-.project-box p {
-    color: #333;
-}
-
-.project-box ul {
-    text-align: left;
-    margin-top: 10px;
-}
-
-.get-involved {
-    margin-top: 40px;
-    text-align: center;
-}
-
-.get-involved .btn {
-    background-color: #c49278;
-    color: #fff;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-}
-
-.get-involved .btn:hover {
-    background-color: #a8795e;
+/* Reverse Layout for Alternating Image/Text */
+.team-member.reverse {
+    flex-direction: row-reverse;
 }
 
 footer {
-    background-color: #feed9b;
+    background-color: #feed9b; /* Secondary color */
     text-align: center;
     padding: 10px;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+    margin-top: 30px;
 }
 
+footer p {
+    color: #333;
+    font-size: 14px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .team-member {
+        flex-direction: column;
+    }
+
+    .team-member .text,
+    .team-member .image {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .team-member .image img {
+        max-width: 80%;
+        margin: 0 auto;
+    }
+}
