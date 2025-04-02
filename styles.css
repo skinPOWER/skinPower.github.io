@@ -7,7 +7,7 @@ body {
     padding: 0;
 }
 
-h1, h2, h3, h4 {
+h1, h2, h3, h4, h5 {
     font-family: 'Gloock', serif;
     color: #c49278;
 }
@@ -49,12 +49,59 @@ main {
     text-align: center;
 }
 
-.join-us {
+.projects {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    padding: 0 20px;
+}
+
+.project-box {
+    background-color: #feed9b;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.project-box img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.project-box:hover {
+    transform: translateY(-5px);
+}
+
+.project-box h4 {
+    margin-top: 10px;
+    color: #c49278;
+}
+
+.project-box h5 {
+    margin-top: 5px;
+    font-size: 1rem;
+    color: #a8795e;
+}
+
+.project-box p {
+    color: #333;
+}
+
+.project-box ul {
+    text-align: left;
+    margin-top: 10px;
+}
+
+.get-involved {
     margin-top: 40px;
     text-align: center;
 }
 
-.join-us .btn {
+.get-involved .btn {
     background-color: #c49278;
     color: #fff;
     padding: 10px 20px;
@@ -62,13 +109,8 @@ main {
     border-radius: 5px;
 }
 
-.join-us .btn:hover {
+.get-involved .btn:hover {
     background-color: #a8795e;
-}
-
-.eczema-info ul {
-    list-style: disc;
-    padding-left: 20px;
 }
 
 footer {
@@ -79,3 +121,4 @@ footer {
     bottom: 0;
     width: 100%;
 }
+
